@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบสอบถามสะท้อนตนเอง</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        .submit-btn {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>แบบสอบถามสะท้อนตนเอง</h2>
+        <form id="reflectionForm">
+            <h3>Part 1: Reflection on Activity</h3>
+            <label>คุณรู้สึกอย่างไรหลังจากทำกิจกรรมนี้?</label><br>
+            <select name="feeling" required>
+                <option value="Fun">สนุก</option>
+                <option value="Relaxed">ผ่อนคลาย</option>
+                <option value="Inspired">มีแรงบันดาลใจ</option>
+                <option value="Peaceful">สงบ</option>
+                <option value="Sad">เศร้า</option>
+                <option value="Stressed">เครียด</option>
+                <option value="Confused">สับสน</option>
+            </select><br><br>
+            
+            <label>คุณได้เรียนรู้อะไรเกี่ยวกับตัวเองจากกิจกรรมนี้?</label><br>
+            <textarea name="self_learning" rows="3" required></textarea><br><br>
+            
+            <label>กิจกรรมนี้ทำให้คุณรู้สึกเชื่อมโยงกับตัวตนที่แท้จริงของคุณมากขึ้นหรือไม่?</label><br>
+            <input type="number" name="true_self" min="1" max="5" required><br><br>
+            
+            <label>กิจกรรมนี้ช่วยเพิ่มความมั่นใจในตนเองหรือไม่?</label><br>
+            <input type="number" name="self_confidence" min="1" max="5" required><br><br>
+            
+            <h3>Part 2: Mood Assessment</h3>
+            <label>ให้คะแนนอารมณ์ของคุณในระดับ 1-5:</label><br>
+            <label>คุณรู้สึกมีความสุขหรือไม่?</label>
+            <input type="number" name="happy" min="1" max="5" required><br><br>
+            
+            <label>คุณรู้สึกมั่นใจมากขึ้นหรือไม่?</label>
+            <input type="number" name="confident" min="1" max="5" required><br><br>
+            
+            <label>คุณรู้สึกสงบและไร้ความเครียดหรือไม่?</label>
+            <input type="number" name="calm" min="1" max="5" required><br><br>
+            
+            <label>คุณรู้สึกถึงจุดมุ่งหมายในชีวิตหรือไม่?</label>
+            <input type="number" name="purpose" min="1" max="5" required><br><br>
+            
+            <label>คุณรู้สึกเชื่อมโยงกับตัวเองมากขึ้นหรือไม่?</label>
+            <input type="number" name="self_connection" min="1" max="5" required><br><br>
+            
+            <h3>Part 3: Progress and Development</h3>
+            <label>คุณสังเกตเห็นการเปลี่ยนแปลงในตัวเองหรือไม่?</label><br>
+            <select name="self_change" required>
+                <option value="Yes, significantly">ใช่ มาก</option>
+                <option value="Yes, slightly">ใช่ เล็กน้อย</option>
+                <option value="Not much">ไม่มาก</option>
+                <option value="Not at all">ไม่เลย</option>
+            </select><br><br>
+            
+            <label>คุณรู้สึกถึงการพัฒนาตัวเองหรือไม่?</label>
+            <input type="number" name="personal_growth" min="1" max="5" required><br><br>
+            
+            <button type="submit" class="submit-btn">ส่งคำตอบ</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("reflectionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("ขอบคุณสำหรับการสะท้อนตนเอง!");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
